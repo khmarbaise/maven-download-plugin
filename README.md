@@ -30,8 +30,8 @@ The first and simplest usage is to configure the Maven Download Plugin
       <version>0.1</version>
       <configuration>
         <url>http://archive.apache.org/dist/hadoop/common/hadoop-0.21.0/hadoop-0.21.0.tar.gz</url>
-        <downloadDirectory>${project.build...}</downloadDirectory>
-        <unpackDirecotry>${project.build.,,}/unpack</unpackDirecotry>
+        <downloadDirectory>${project.build.directory}/downloads/</downloadDirectory>
+        <unpackDirecotry>${project.build.directory}/installations/</unpackDirecotry>
       </configuration>
     </plugin>
 
