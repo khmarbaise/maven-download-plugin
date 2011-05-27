@@ -25,22 +25,24 @@ public class DownloadMojo extends AbstractMojo {
 
     /**
      * @parameter
+     * @required
      */
     private URL url;
     /**
-     * @parameter default="${project.build.directory}/download/downloads"
+     * @parameter default-value="${project.build.directory}/download/downloads"
      */
     private File downloadDir;
     /**
-     * @parameter default="${project.build.directory}/download/installations"
+     * @parameter default-value="${project.build.directory}/download/installations"
      */
     private File extractDir;
     
     public void execute() {
         getLog().info("downloadDir:" + downloadDir.getAbsolutePath());
         getLog().info("extractDir:" + extractDir.getAbsolutePath());
-
+        getLog().info("URL:" + url.toString());
         ZipURLInstaller installer = new ZipURLInstaller(url, downloadDir.getAbsolutePath(), extractDir.getAbsolutePath());
+//        installer.setFileHandler(fileHandler)
 //        installer.setLogger(getLog());
 //        project.getProperties().
         installer.install();
