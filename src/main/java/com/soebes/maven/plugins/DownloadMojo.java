@@ -17,7 +17,7 @@ public class DownloadMojo extends AbstractMojo {
 
     /**
      * The maven project.
-     * 
+     *
      * @parameter expression="${project}"
      * @readonly
      */
@@ -29,14 +29,14 @@ public class DownloadMojo extends AbstractMojo {
      */
     private URL url;
     /**
-     * @parameter default-value="${project.build.directory}/download/downloads"
+     * @parameter default-value="${project.build.directory}/downloads/"
      */
     private File downloadDir;
     /**
-     * @parameter default-value="${project.build.directory}/download/installations"
+     * @parameter default-value="${project.build.directory}/installations/"
      */
     private File extractDir;
-    
+
     public void execute() {
         getLog().info("downloadDir:" + downloadDir.getAbsolutePath());
         getLog().info("extractDir:" + extractDir.getAbsolutePath());
