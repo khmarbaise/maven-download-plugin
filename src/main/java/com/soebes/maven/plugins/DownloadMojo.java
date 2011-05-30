@@ -33,7 +33,7 @@ public class DownloadMojo extends AbstractMojo {
      */
     private File downloadDir;
     /**
-     * @parameter default-value="${project.build.directory}/installations/"
+     * @parameter default-value="${java.io.tmpdir}/cargo/installs/"
      */
     private File extractDir;
 
